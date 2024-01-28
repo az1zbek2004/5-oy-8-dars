@@ -160,15 +160,16 @@
 // Savollar ingliz tilida bo'lganligi tufayli translate o'zbekchaga juda xunuk tarjima qilyapti
 
 // CLASS
-class User{
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    };
-};
 
-let user1 = new User("John", 23);
-console.log(user1);
+// class User{
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     };
+// };
+
+// let user1 = new User("John", 23);
+// console.log(user1);
 
 // MAP AND SET
 // MAP
@@ -234,3 +235,96 @@ console.log(user1);
 // }); 
 
 // listGroup.appendChild(frag);
+
+
+// STORAGE 
+// localStorage
+// let data = ["salom", "hello", 5];
+// localStorage.setItem("kalit", JSON.stringify(data));
+
+// let abc = JSON.parse(localStorage.getItem("kalit"));
+// localStorage.removeItem("kalit");
+// localStorage.clear();
+// console.log(abc);
+
+// sessionStorage
+// let data = ["salom", "hello", 5];
+// sessionStorage.setItem("kalit", JSON.stringify(data));
+
+// let abc = JSON.parse(sessionStorage.getItem("kalit"));
+// // sessionStorage.removeItem("kalit");
+// // sessionStorage.clear();
+// console.log(abc);
+
+// IndexDB ma'lumotlar omborini yaratish
+
+// // buni yaratish ozgina qiyinligi sababli Chatgptdan foydalanildi
+
+// let request = indexedDB.open('myDatabase', 1);
+// let db;
+
+// request.onerror = function(event) {
+//   console.log("Xatolik ro'y berdi:", event.target.errorCode);
+// };
+
+// request.onupgradeneeded = function(event) {
+//   db = event.target.result;
+//   let objectStore = db.createObjectStore("myStore", { keyPath: "id" });
+// };
+
+// request.onsuccess = function(event) {
+//   db = event.target.result;
+  
+//   // Ma'lumot qo'shish
+//   let transaction = db.transaction(["myStore"], "readwrite");
+//   let objectStore = transaction.objectStore("myStore");
+  
+//   let data = { id: 1, name: "John", age: 30 };
+//   let request = objectStore.add(data);
+  
+//   request.onsuccess = function(event) {
+//     console.log("Ma'lumot qo'shildi.");
+//   };
+  
+//   request.onerror = function(event) {
+//     console.log("Xatolik ro'y berdi:", event.target.errorCode);
+//   };
+// };
+
+
+// // tozalash
+// // Ma'lumotlar omborini yaratish
+// let request = indexedDB.open('myDatabase', 1);
+// let db;
+
+// request.onerror = function(event) {
+//   console.log("Xatolik ro'y berdi:", event.target.errorCode);
+// };
+
+// request.onsuccess = function(event) {
+//   db = event.target.result;
+  
+//   // Barcha ma'lumotlarni tozalash
+//   let transaction = db.transaction(["myStore"], "readwrite");
+//   let objectStore = transaction.objectStore("myStore");
+  
+//   let clearRequest = objectStore.clear();
+  
+//   clearRequest.onsuccess = function(event) {
+//     console.log("Barcha ma'lumotlar muvaffaqiyatli tozalandi.");
+//   };
+  
+//   clearRequest.onerror = function(event) {
+//     console.log("Xatolik ro'y berdi:", event.target.errorCode);
+//   };
+// };
+
+
+// COOKIE
+// Cookie ga ma'lumot qo'shish
+// document.cookie = "username=John Doe name; Ali";//  ; => to'xtatish
+document.cookie = "username=John Doe; expires=Thu, 28 Jan 2024 21:36:00 UTC; path=/";//Ushbu kodda, "username=John Doe" qiymatini o'z ichiga olgan yangi cookie yaratiladi. "expires" qismida cookie amal qilish muddati aniqlangan. "path" qismida cookie yuritiladigan manzil ko'rsatilgan.
+document.cookie = 'username' + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";//o'chirish
+
+let cookies = document.cookie;//olish
+console.log(cookies);
