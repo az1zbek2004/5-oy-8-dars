@@ -162,27 +162,45 @@ const movie2 = {
 // CLASS
 
 // MAP AND SET
-MAP
-let shoppingCartPrice = new Map();
-shoppingCartPrice.set("1", 15000);
-shoppingCartPrice.set("2", 13000);
-shoppingCartPrice.set("3", 20000);
-shoppingCartPrice.set("4", 17000);
-shoppingCartPrice.set("5", 8000);
-shoppingCartPrice.set("6", 33000);
+// MAP
+// let shoppingCartPrice = new Map();
+// shoppingCartPrice.set("1", 15000);
+// shoppingCartPrice.set("2", 13000);
+// shoppingCartPrice.set("3", 20000);
+// shoppingCartPrice.set("4", 17000);
+// shoppingCartPrice.set("5", 8000);
+// shoppingCartPrice.set("6", 33000);
 
-let shoppingCartCount = new Map();
-shoppingCartCount.set("1", 20);
-shoppingCartCount.set("2", 10);
-shoppingCartCount.set("3", 5);
-shoppingCartCount.set("4", 10);
-shoppingCartCount.set("5", 6);
-shoppingCartCount.set("6", 7);
+// let shoppingCartCount = new Map();
+// shoppingCartCount.set("1", 20);
+// shoppingCartCount.set("2", 10);
+// shoppingCartCount.set("3", 5);
+// shoppingCartCount.set("4", 10);
+// shoppingCartCount.set("5", 6);
+// shoppingCartCount.set("6", 7);
 
-shoppingCartPrice.delete("4");
-shoppingCartCount.delete("4");
-let generalPrice = shoppingCartPrice.get("1")*shoppingCartCount.get("1")+shoppingCartPrice.get("2")*shoppingCartCount.get("2")+shoppingCartPrice.get("3")*shoppingCartCount.get("3")+shoppingCartPrice.get("5")*shoppingCartCount.get("5")+shoppingCartPrice.get("6")*shoppingCartCount.get("6");
+// shoppingCartPrice.delete("4");
+// shoppingCartCount.delete("4");
+// let generalPrice = shoppingCartPrice.get("1")*shoppingCartCount.get("1")+shoppingCartPrice.get("2")*shoppingCartCount.get("2")+shoppingCartPrice.get("3")*shoppingCartCount.get("3")+shoppingCartPrice.get("5")*shoppingCartCount.get("5")+shoppingCartPrice.get("6")*shoppingCartCount.get("6");
 
 
-console.log(generalPrice);
+// console.log(generalPrice);
+
+// SET
+
+let webUrl = new Set();
+webUrl.add("https//kun.uz");
+webUrl.add("https//daryo.uz");
+webUrl.add("https//kun.uz");
+webUrl.add("https//qalampir.uz");
+webUrl.add("https//wikipedia.com");
+
+// console.log(webUrl.size);
+let myArray = Array.from(webUrl);
+let newArr = [];
+newArr.push(myArray[3]);
+newArr.push(myArray[1]);
+
+console.log(newArr);
+
 
