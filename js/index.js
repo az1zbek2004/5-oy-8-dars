@@ -1,5 +1,5 @@
 // 1-topshiriq
-const price = [10.99, 5.45, 23.00, 7.86];
+// const price = [10.99, 5.45, 23.00, 7.86];
 
 // // first and last
 // [a,,,b] = price;
@@ -25,16 +25,16 @@ const price = [10.99, 5.45, 23.00, 7.86];
 
 // 2-misol
 
-const movie1 = {
-    title:"The Matrix",
-    director:"The Wachowskis",
-    year:1999,
-};
+// const movie1 = {
+//     title:"The Matrix",
+//     director:"The Wachowskis",
+//     year:1999,
+// };
 
-const movie2 = {
-    genre:"Science fiction",
-    cast:["Keanu Reeves", "Laurence Fishburne", "Carri-Anne Moss"],
-};
+// const movie2 = {
+//     genre:"Science fiction",
+//     cast:["Keanu Reeves", "Laurence Fishburne", "Carri-Anne Moss"],
+// };
 
 // 1
 // let {title, director, year} = movie1;
@@ -160,6 +160,15 @@ const movie2 = {
 // Savollar ingliz tilida bo'lganligi tufayli translate o'zbekchaga juda xunuk tarjima qilyapti
 
 // CLASS
+class User{
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    };
+};
+
+let user1 = new User("John", 23);
+console.log(user1);
 
 // MAP AND SET
 // MAP
@@ -188,19 +197,40 @@ const movie2 = {
 
 // SET
 
-let webUrl = new Set();
-webUrl.add("https//kun.uz");
-webUrl.add("https//daryo.uz");
-webUrl.add("https//kun.uz");
-webUrl.add("https//qalampir.uz");
-webUrl.add("https//wikipedia.com");
+// let webUrl = new Set();
+// webUrl.add("https//kun.uz");
+// webUrl.add("https//daryo.uz");
+// webUrl.add("https//kun.uz");
+// webUrl.add("https//qalampir.uz");
+// webUrl.add("https//wikipedia.com");
 
-// console.log(webUrl.size);
-let myArray = Array.from(webUrl);
-let newArr = [];
-newArr.push(myArray[3]);
-newArr.push(myArray[1]);
+// // console.log(webUrl.size);
+// let myArray = Array.from(webUrl);
+// let newArr = [];
+// newArr.push(myArray[3]);
+// newArr.push(myArray[1]);
 
-console.log(newArr);
+// console.log(newArr);
 
 
+// getComputedStyle
+// const block = document.getElementById("element");
+// const element1 = document.getElementById("element1");
+// const element2 = document.getElementById("element2");
+// const listGroup = document.getElementById("list-group");
+
+// console.log(window.getComputedStyle(block));
+// console.log(window.getComputedStyle(element1));  
+// console.log(window.getComputedStyle(element2));
+
+
+// const frag = document.createDocumentFragment();
+
+// let user = ["salom", "hello", "bye"];
+// user.forEach(item => {
+//     let li = createElement(item);
+//     li.setAttribute("style", "color:blue;");
+//     frag.appendChild(li);    
+// }); 
+
+// listGroup.appendChild(frag);
